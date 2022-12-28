@@ -28,6 +28,8 @@ class CreateRestaurantsTable extends Migration
             $table->id();
             $table->timestamps();
             $table->string('rev');
+            $table->unsignedBigInteger('category_id');
+            $table->unsignedBigInteger('feature_id');
         });
     }
 
