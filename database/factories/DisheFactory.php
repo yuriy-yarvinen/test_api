@@ -14,7 +14,11 @@ class DisheFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'name' => $this->faker->text(10),
+            'restaurant_id' => rand(1,10),
+            'price' => rand(10,100),
+            'short_description' =>  $this->faker->text(),
+            'image' => $this->faker->imageUrl(600,400, 'dishe'),
         ];
     }
 }
