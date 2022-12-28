@@ -46,7 +46,7 @@ class FeatureController extends Controller
      */
     public function show($id)
     {
-        //
+        return Feature::with('restaurant', 'restaurant.dishes')->where('id', $id)->get();
     }
 
     /**
