@@ -20,7 +20,7 @@ class CreateDishesTable extends Migration
             $table->string('image');
             $table->id();
             $table->timestamps();
-            $table->unsignedBigInteger('restaurant_id');
+            $table->unsignedBigInteger('restaurant_id')->nullable();
         });
     }
 
